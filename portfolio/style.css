@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,200&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root{
+    --border:1px solid  #dce1e4;
+    --gradient:linear-gradient(
+        -45deg,#D000F7,#24bae3
+    );
+    --box-shadow: 5px 5px 15px #c1c8d3,
+    -5px -5px 15px #fff;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #eaecee;
+    color: #3c3e41;
+    margin: 0;
+    font-size: 15px;
+
+}
+a{
+    color: #3c3e41;
+    text-decoration: none;
+
+}
+header{
+    padding: 10px;
+    width: calc(100% - 20px);
+    border-bottom: var(--border);
+    display: grid;
+    grid-template-columns: 30% 70%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #eaecee;
+    z-index: 1;
+
+}
+header .logo h1{
+    height: 50px;
+}
+header ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
+header ul li{ 
+    padding: 0 30px;
+}
+.container{
+    width: 1200px;
+    max-width: 90%;
+    margin: 150px auto 0;
+}
+.banner{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    border-bottom: var(--border);
+    padding-bottom: 50px;
+}
+.bannner .content{
+    text-align: justify;
+    padding-right: 50px;
+
+}
+.banner .content h1{
+    font-size: 4.5em;
+    margin: 0;
+}
+.gradientText{
+    display: inline-block;
+    background-image: var(--gradient);
+   
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+}
+.job::before{
+    content: attr(data-job1);
+    overflow: hidden;
+    display: inline-block;
+    animation:
+     effectText 1s linear infinite alternate,
+     changeText 4s linear infinite
+}
+@keyframes effectText{
+    from{
+        max-width: 0;
+
+    }to{
+        max-width: 500px;
+    }
+}
+@keyframes changeText{
+    0%{
+        content: attr(data-job1);
+    }100%{
+        content: attr(data-job2);
+    }
+}
+.find{
+    margin-top: 50px;
+}
+.find ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+.find form{
+    margin: 50px;
+}
+.find ul li{
+    width: 50px;
+    height: 50px;
+    box-shadow: var(--box-shadow);
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+
+}
+.find ul li:hover{
+    color: #fff;
+    background-image: var(--gradient);
+
+}
+.banner .avatar img{
+  width: 90%;
+
+}
+.banner .avatar{
+ text-align: center;
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: end;
+}
+.banner .avatar::before{
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    box-shadow: var(--box-shadow);
+    content: '';
+    bottom: 0;
+    z-index: -1;
+}
+.title{
+    text-align: center;
+    padding-top: 100px;
+    font-weight: 700;
+    font-size: x-large;
+}
+.listskill{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    border-bottom: var(--border);
+    padding-bottom: 50px;
+    margin-top: 50px;
+}
+.listskill .evaluate{
+    width: 100%;
+    height: 20px;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+.listskill .evaluate::before{
+    position: absolute;
+    height: 100%;
+    width: var(--point);
+    content: '';
+    background-image: var(--gradient);
+    border-radius: 10px;
+}
+.listproject{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    border-bottom: var(--border);
+    padding-bottom: 50px;
+    margin-top: 50px;
+}
+.listproject .item{
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    border-radius: 10px;font-weight: bold;
+    font-size: large;
+}
+.listproject .item img{
+    width: 90%;
+    border-radius: 20px;
+}
+.contact{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.contact li{
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.contact li:hover{
+    color: #fff;
+    background-image: var(--gradient);
+}
+.gmap{
+    width:100%;
+    height: 400px;
+    border-bottom: 1px solid gainsboro;
+}
+.gmap iframe{
+    width: 100%;
+    height: 400px;
+}
+.contactdetails{
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+.contactform{
+    padding: 25px;
+    width: 50%;
+}
+.contactform form{
+    display: flex;
+    flex-direction: column;
+    
+}
+.contactform form input,
+.contactform form textarea{
+    width: 100%;
+    padding:10px;
+    margin: 5px 0px;
+
+}
+.contactform form button{
+    display: inline-block;
+    width: 105%;
+    padding: 10px;
+}
+.copy{
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding: 10px;
+    
+}
+header input,
+    header .navDiv,
+    header ul label{
+        display: none;
+    }
+    
+
+
+@media screen and(max-width:1024px){
+    .banner .content h1{
+        font-size: 2em;
+    }
+    .listproject{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width:767px){
+    header ul{
+        position: fixed;
+        background-color: #F0F3F5;
+        width: 70%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5,70px);
+        margin: 0;
+        transform: translateX(-100%);
+        transition: 0.5s;
+    }
+    header .navDiv{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    header label{
+        width: 50px;
+        height: 50px;
+        box-shadow: var(--box-shadow);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    input#menu:checked ~ .nav{
+        transform: translateX(0);
+    }
+    header .nav label{
+        display: flex;
+        transform: translateX(20px);
+    }
+    .banner{
+        grid-template-columns: 1fr;
+    }
+    .banner .content{
+        padding-right: 0;
+    }
+.banner .avatar{
+    grid-row-start: 1;
+}
+.listskill, .listproject{
+    grid-template-columns: 1fr;
+}
+
+}
